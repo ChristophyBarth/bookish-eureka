@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="15dp"
+            app:contentInsetStart="0dp">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bitcoin_icons_menu_filled"
+                android:padding="10dp"
+                android:layout_gravity="start" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:padding="10dp"
+                android:layout_gravity="end" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_home"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/christophy"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/welcome_text"
+            android:textSize="70sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bebas_neue" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smart_devices"
+            android:layout_below="@id/divider"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/smart_device_text" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/smart_device_text"
+            android:orientation="vertical"
+            android:rowCount="2"
+            android:layout_marginVertical="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="245dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/card_color"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/ic_bulb_off"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/smart_tv_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/smart_light"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/switch1" />
+
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="56dp"
+                        android:rotation="90"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/smart_tv_text"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="245dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/card_color"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/ic_tv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingVertical="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/smart_tv"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp" />
+
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="56dp"
+                        android:rotation="90" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="245dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginStart="15dp"
+                app:cardBackgroundColor="@color/card_color"
+                android:layout_marginBottom="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/ic_ac"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp" />
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/smart_ac"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp" />
+
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="56dp"
+                        android:rotation="90" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="245dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/card_color"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/ic_fan"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp" />
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/smart_fan"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp" />
+
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="90"
+                        android:minHeight="56dp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

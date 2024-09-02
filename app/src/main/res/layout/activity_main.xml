@@ -50,7 +50,6 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/christophy"
             android:textAllCaps="true"
             android:layout_marginTop="15dp"
             android:layout_below="@id/welcome_text"
@@ -97,6 +96,7 @@
                 app:cardElevation="0dp">
 
                 <ImageView
+                    android:id="@+id/bulb"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
                     android:src="@drawable/ic_bulb_off"
